@@ -12,7 +12,7 @@ public class BadLockOnInteger implements Runnable {
     @Override
     public void run() {
         for (int j = 0; j < 1000000; j++){
-            synchronized (instance){
+            synchronized (i){
                 i++;
             }
         }
